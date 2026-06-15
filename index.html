@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="client.js" defer></script>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="main-game-container">
+            <h1 aria-label="Connect 4">Connect 4</h1>
+            <h2 aria-label="Select Game Mode">Select Game Mode</h2>
+            <div id="game-mode-container">
+                <div id="offline-game-modes" , class="mode-container">
+                    <h3 aria-label="Offline Game Modes">Offline</h3>
+                    <select id="offline-mode-select">
+                        <option value="pvp">Player vs. Player</option>
+                        <option value="pvc">Player vs. Computer</option>
+                    </select>
+                    <p aria-label="Computer Difficulty">Computer Difficulty:</p>
+                    <select id="computer-difficulty-select">
+                        <option value="naive">Naive</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                    <button id="start-game-btn" class="btn" aria-label="Start Offline Game">Start Game</button>
+                </div>
+                <div id="online-game-modes" , class="mode-container">
+                    <h3 aria-label="Online Game Modes">Online</h3>
+                    <p>Player vs. Player</p>
+                    <input id="player-name" type="text" placeholder="Enter your name"
+                        aria-label="Enter your player name for online play" aria-required="true">
+                    <button id="connect-btn" class="btn" aria-label="Connect to an online server">Connect</button>
+                    <button id="disconnect-btn" class="btn"
+                        aria-label="Disconnect from your online server">Disconnect</button>
+                    <p id="connection-status" aria-live="polite">No Connection.</p>
+                </div>
+            </div>
+            <div id="game-container">
+                <h2 id="game-status" aria-live="polite">Offline Player vs Player</h2>
+                <h3 id="turn-status" aria-live="polite">Player R's Turn</h3>
+                <p id="online-status" aria-live="polite">No Connection.</p>
+                <button id="reset-btn" class="btn" aria-label="Play again">Play Again</button>
+                <div id="game-board" class="grid-container" role="grid" aria-label="Connect 4 Game Board"></div>
+                <textarea id="game-log" rows="5" cols="60"></textarea>
+            </div>
+        </div>
+        <div id="database-container">
+            <h1>High Scores</h1>
+            <p id="table-message" aria-live="polite">You are disconnected. Connect to the server to view high scores.
+            </p>
+            <table id="highscores-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Mode</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="highscores-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

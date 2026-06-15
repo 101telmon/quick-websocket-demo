@@ -1,0 +1,189 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #cccccc;
+}
+
+p {
+    font-size: 16px;
+    color: gray;
+}
+
+input {
+    padding: 10px;
+    margin: 2px;
+    border-radius: 5px;
+    border: solid;
+    border-width: thin;
+    border-color: #cccccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+textarea {
+    padding: 10px;
+    margin: 2px;
+    border-radius: 5px;
+    border: solid;
+    border-width: thin;
+    border-color: #cccccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+select {
+    padding: 10px;
+    margin: 2px;
+    border-radius: 5px;
+    border: solid;
+    border-width: thin;
+    border-color: #cccccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+    cursor: pointer;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background-color: royalblue;
+}
+
+.mode-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin: 25px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.grid-container {
+    background-color: #004de6;
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 5px;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.grid-btn {
+    background-color: #ffffff;
+    border: solid;
+    border-radius: 50%;
+    border-color: #003399;
+    border-width: 5px;
+}
+
+.grid-btn:hover {
+    background-color: #e6e6e6;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    margin: 25px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#main-game-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    margin: 25px;
+    padding: 20px;
+    gap: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#database-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    margin: 25px;
+    padding: 20px;
+    gap: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#game-mode-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#game-container {
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-top: 0px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#highscores-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    background-color: white;
+}
+
+#highscores-table th {
+    background-color: cornflowerblue;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+}
+
+#highscores-table td {
+    padding: 12px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#highscores-table tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 800px) {
+    #main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #game-mode-container {
+        flex-direction: column;
+    }
+}
