@@ -1,2 +1,2 @@
 # quick-websocket-demo
-A quick Tic-Tac-Toe game that I made to test my knowledge on WebSockets
+> [!NOTE] This is a quick Tic-Tac-Toe game made with WebSocket and SQLite support. A better implementation can definitely be made, but wanted to show my knowledge on WebSockets especially.
